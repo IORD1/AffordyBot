@@ -1,0 +1,17 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    margin: 30px 40px auto 30px;
+}
+
+.btn{
+    margin-top: 12px;
+}
+
+#inputaddress{
+    width: 30px;
+}
