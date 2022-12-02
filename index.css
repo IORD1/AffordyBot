@@ -40,3 +40,10 @@ body{
     height: 25vh;
     width: auto;
 }
+
+.title-text{
+    /* display: flex;
+    flex-direction: column; */
+    height: 25vh;
+    width: auto;
+}
