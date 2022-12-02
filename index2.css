@@ -1,15 +1,19 @@
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+h1{
+    margin: 50px auto auto 50px;
+}
+p{
+    margin: 5px auto auto 50px;
 }
 
 form{
-    margin: 30px 40px auto 30px;
+    margin: 30px auto auto 50px;
+}
+.form-group{
+    margin: 10px auto auto 0px;
 }
 
 .btn{
-    margin-top: 12px;
+    margin-top: 22px;
 }
 
 #inputaddress{
