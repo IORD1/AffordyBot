@@ -12,39 +12,55 @@
         form{
             margin-left: 40px;
         }
+        .backbutton{
+            margin: 30px auto auto 50px;
+            background-color: transparent;
+            color: black;
+            }
+
+        .btn-outline-primary{
+            margin: 30px auto auto auto;
+        }
+        p{
+            margin: 30px auto 30px 40px;
+        }
     </style>
 </head>
 <body>
-    <h1 class="h1 text-center text-primary">AffordyBot</h1>
+    <button type="back" class="btn btn-primary backbutton" onclick="location.href='index.html'">Back</button>
+
+    <h1 class="h1 text-center ">AffrodyBOT</h1>
+    <p>Enter data to Find out the wheather the EMI is Optimal for you condition or not</p>
+    
     <form action="">
-        <table>
+        <table class="form-row">
         <tr>
             <td><label for="TotalAmt" class="form-label">Total Amount</label></td>
-            <td><input type="number" class="form-label " name="TotalAmt" id="TotalAmt"></td>
+            <td><input type="number" class="form-label form-control " name="TotalAmt" id="TotalAmt" placeholder="Enter Total Amount"></td>
         </tr>
         <tr>
             <td><label for="DownPay">Down Payment</label></td>
-            <td><input type="number" name="DownPay" id="Down Pay"></td>
+            <td><input type="number" name="DownPay" id="Down Pay" class="form-label form-control"></td>
         </tr>
         <tr>
             <td><label for="months" class="form-label">Months</label></td>
-            <td><input type="number" name="months" id="months"></td>
+            <td><input type="number" name="months" id="months" class="form-label form-control"></td>
         </tr>
         <tr>   
             <td><label for="pricePerMonths" class="form-label">Price Per Month</label></td>
-            <td><input type="number" name="pricePerMonths" id="pricePerMonths"></td>
+            <td><input type="number" name="pricePerMonths" id="pricePerMonths" class=" form-label form-control"></td>
         </tr>
         <tr>
             <td><label for="remAmount" class="form-label">Remaining Amount</label></td>
-            <td><input type="text" name="remAmount" id="remAmount"></td>
+            <td><input type="text" name="remAmount" id="remAmount" class="form-label form-control"></td>
         </tr>
         <tr>
             <td><label for="interest" class="form-label">Interest</label></td>
-            <td><input type="text" name="interest" id="interest"></td>
+            <td><input type="text" name="interest" id="interest" class="form-label form-control"></td>
         </tr>
         <tr>
             <td><label for="amountAfterInterest" class="form-label">Amount after Interest</label></td>
-            <td><input type="text" name="amountAfterInterest" id="amountAfterInterest"></td>
+            <td><input type="text" name="amountAfterInterest" id="amountAfterInterest" class="form-label form-control"></td>
         </tr>
         <tr>    
        <td> <button type="submit" class="btn btn-outline-primary">Calculate</button></td>
