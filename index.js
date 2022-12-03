@@ -3,49 +3,68 @@
 var totalAmount  = 12000;
 var downpayment = 1000;
 var months = 9;
-var pricePerMonth = 1200;
+var pricePerMonth = 0;
 var restOfAmount;
 var intrest = 10;
 var amountAfterIntrest ;
-var months;
+var months = 0;
 var salary;
 salary = 10000;
+
+$("display").html('');
+
+// $("#display").append(linkeditdelete);
+
 
 function calculate(){
     restOfAmount = totalAmount - downpayment;
     amountAfterIntrest = restOfAmount + ((restOfAmount*intrest)/100);
-    console.log("Amount After Interest : " + amountAfterIntrest);
-    console.log("You require to Pay : " + ((restOfAmount*intrest)/100) + ' Extra');
-}
-
-function pricePermonth(months){
-    calculate();
-    pricePerMonth = amountAfterIntrest/months;
-    if(pricePerMonth > (0.15*salary)){
-        console.log("Not Beneficial");
-        console.log('Final Amount per month : ' + pricePerMonth);
-    }else{
-        console.log("Beneficial");
-        console.log('Final Amount per month : ' + pricePerMonth);
-    }
+    $("#display").append("Amount After Interest : " + amountAfterIntrest+'+'+downpayment + '<br>');
+    $("#display").append("You require to Pay : " + ((restOfAmount*intrest)/100) + ' Extra'+'<br>');
 }
 
 
-function monthsOnPrice(pricePerMonth){
-    calculate();
+
+function monthsOnPrice(){
     months = amountAfterIntrest/pricePerMonth;
+    months = months.toFixed(1);
     if(months > 24){
-        console.log("Not Beneficial");
-        console.log("Months required : " + months);
+        $("#display").append("Not Beneficial"+ '<br>');
+        $("#display").append("Months required : " + months+ '<br>');
     }else{
-        console.log("Beneficial");
-        console.log("Months required : " + months);
+        $("#display").append("Beneficial"+ '<br>');
+        $("#display").append("Months required : " + months+ '<br>');
     }
 
 }
 
 
-function soShalI(){
-    
+
+function invoke(){
+    $("display").html('');
+
+    totalAmount = document.getElementById('TotalAmt').value ;
+    downpayment = document.getElementById('DownPay').value;
+    months = document.getElementById('months').value;
+    pricePerMonth = document.getElementById('pricePerMonth').value;
+    intrest = document.getElementById('interest').value;
+    salary = document.getElementById('salary').value;
+
+
+
+    calculate();
+    if(months == ''){
+        monthsOnPrice();
+    }else{
+        pricePerMonth = amountAfterIntrest/months;
+        if(pricePerMonth > (0.15*salary)){
+            $("#display").append("Not Beneficial" + '<br>');
+            $("#display").append('Final Amount per month : ' + pricePerMonth+ '<br>');
+        }else{
+            $("#display").append("Beneficial"+ '<br>');
+            $("#display").append('Final Amount per month : ' + pricePerMonth+ '<br>');
+        }
+    }
 }
-monthsOnPrice();
+
+
