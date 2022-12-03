@@ -30,10 +30,10 @@ function monthsOnPrice(){
     months = months.toFixed(1);
     if(months > 24){
         $("#display").append("Not Beneficial"+ '<br>');
-        $("#display").append("Months required : " + months+ '<br>');
+        $("#display").append("Months required : " + months+', ('+pricePerMonth+'/perMonth)'+  '<br>');
     }else{
         $("#display").append("Beneficial"+ '<br>');
-        $("#display").append("Months required : " + months+ '<br>');
+        $("#display").append("Months required : " + months+', ('+pricePerMonth+'/perMonth)'+ '<br>');
     }
 
 }
@@ -41,7 +41,7 @@ function monthsOnPrice(){
 
 
 function invoke(){
-    $("display").html('');
+    $("display").html('------------------');
 
     totalAmount = document.getElementById('TotalAmt').value ;
     downpayment = document.getElementById('DownPay').value;
@@ -57,9 +57,10 @@ function invoke(){
         monthsOnPrice();
     }else{
         pricePerMonth = amountAfterIntrest/months;
+        pricePerMonth = pricePerMonth.toFixed(2);
         if(pricePerMonth > (0.15*salary)){
             $("#display").append("Not Beneficial" + '<br>');
-            $("#display").append('Final Amount per month : ' + pricePerMonth+ '<br>');
+            $("#display").append('Final Amount per month : ' + pricePerMonth+'<br>');
         }else{
             $("#display").append("Beneficial"+ '<br>');
             $("#display").append('Final Amount per month : ' + pricePerMonth+ '<br>');

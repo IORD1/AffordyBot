@@ -11,4 +11,7 @@ function calculate(){
     console.log((totalAmount-downPay)/months);
 }   
 
+
+
+
 calculate(); 
