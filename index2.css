@@ -14,6 +14,7 @@ form{
 
 .btn{
     margin-top: 22px;
+    margin-left: 50px;
 }
 
 .backbutton{
@@ -25,4 +26,11 @@ form{
 
 #inputaddress{
     width: 30px;
+}
+
+#result{
+    margin: 30px auto auto 50px;
+    border: dotted 3px gainsboro;
+    padding: 10px;
+    width: 400px;
 }
