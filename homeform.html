@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"> 
-    <script src="index.js"></script>
+
     <title>Car Installment</title>
     <style>
         form{
@@ -20,35 +19,28 @@
             }
 
         .btn-outline-primary{
-            margin: 30px auto auto 30px;
+            margin: 30px auto auto auto;
         }
         p{
             margin: 30px auto 30px 40px;
-        }
-
-        #display{
-            margin: 20px auto 100px 30px;
-            border: dotted 3px gainsboro;
-            padding: 10px;
-            width: 400px;
         }
     </style>
 </head>
 <body>
     <button type="back" class="btn btn-primary backbutton" onclick="location.href='index.html'">Back</button>
 
-    <h1 class="h1 text-center ">AffordyBOT</h1>
+    <h1 class="h1 text-center ">AffrodyBOT</h1>
     <p>Enter data to Find out the wheather the EMI is Optimal for you condition or not</p>
     
     <form action="">
         <table class="form-row">
         <tr>
             <td><label for="TotalAmt" class="form-label">Total Amount</label></td>
-            <td><input type="number" class="form-label form-control " name="TotalAmt" id="TotalAmt" ></td>
+            <td><input type="number" class="form-label form-control " name="TotalAmt" id="TotalAmt" placeholder="Enter Total Amount"></td>
         </tr>
         <tr>
             <td><label for="DownPay">Down Payment</label></td>
-            <td><input type="number" name="DownPay" id="DownPay" class="form-label form-control"></td>
+            <td><input type="number" name="DownPay" id="Down Pay" class="form-label form-control"></td>
         </tr>
         <tr>
             <td><label for="months" class="form-label">Months</label></td>
@@ -56,25 +48,24 @@
         </tr>
         <tr>   
             <td><label for="pricePerMonths" class="form-label">Price Per Month</label></td>
-            <td><input type="number" name="pricePerMonths" id="pricePerMonth" class=" form-label form-control"></td>
+            <td><input type="number" name="pricePerMonths" id="pricePerMonths" class=" form-label form-control"></td>
+        </tr>
+        <tr>
+            <td><label for="remAmount" class="form-label">Remaining Amount</label></td>
+            <td><input type="text" name="remAmount" id="remAmount" class="form-label form-control"></td>
         </tr>
         <tr>
             <td><label for="interest" class="form-label">Interest</label></td>
-            <td><input type="number" name="interest" id="interest" class="form-label form-control"></td>
+            <td><input type="text" name="interest" id="interest" class="form-label form-control"></td>
         </tr>
         <tr>
-            <td><label for="salary" class="form-label">Salary</label></td>
-            <td><input type="number" name="salary" id="salary" class="form-label form-control"></td>
+            <td><label for="amountAfterInterest" class="form-label">Amount after Interest</label></td>
+            <td><input type="text" name="amountAfterInterest" id="amountAfterInterest" class="form-label form-control"></td>
+        </tr>
+        <tr>    
+       <td> <button type="submit" class="btn btn-outline-primary">Calculate</button></td>
         </tr>
     </table>
     </form>
-
-       <td> 
-    </tr>
-</table>
-</form>
-<button  class="btn btn-outline-primary" onclick="invoke()">Submit</button></td>
-
-    <div id="display"></div>
 </body>
 </html>
